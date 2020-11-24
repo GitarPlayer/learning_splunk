@@ -32,7 +32,7 @@ Change into the repository and start the containers (-d starts the containers in
 ```
 cd learning_splunk && docker-compose up -d 
 ```
-The familiar Splunk login page should greet you at localhost:8000 to localhost:8006.  
+The familiar Splunk login page should greet you at localhost:8000 to localhost:8006. You can log in with the default admin user and the password is password. 
 **If you are running this inside of a VM you need to configure port forwarding!**
 
 ## Running the tests
