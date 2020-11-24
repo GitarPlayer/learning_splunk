@@ -1,0 +1,51 @@
+version: "3.8"
+services:
+  sh-master:
+    ports:
+      - "8000:8000"
+    environment:
+      SPLUNK_PASSWORD: password
+      SPLUNK_START_ARGS: --accept-license
+    image: "splunk/splunk"
+  sh-01:
+    ports:
+      - "8001:8001"
+    environment:
+      SPLUNK_PASSWORD: password
+      SPLUNK_START_ARGS: --accept-license
+    image: "splunk/splunk"
+  sh-02:
+    ports:
+      - "8002:8002"
+    environment:
+      SPLUNK_PASSWORD: password
+      SPLUNK_START_ARGS: --accept-license
+    image: "splunk/splunk"     
+  indx-master:
+    ports:
+      - "8003:8003"
+    environment:
+      SPLUNK_PASSWORD: password
+      SPLUNK_START_ARGS: --accept-license
+    image: "splunk/splunk"  
+  idx-01:
+    ports:
+      - "8004:8004"
+    environment:
+      SPLUNK_PASSWORD: password
+      SPLUNK_START_ARGS: --accept-license
+    image: "splunk/splunk"
+  idx-02:
+    ports:
+      - "8005:8005"
+    environment:
+      SPLUNK_PASSWORD: password
+      SPLUNK_START_ARGS: --accept-license
+    image: "splunk/splunk"   
+  deployer:
+    ports:
+      - "8006:8006"
+    environment:
+      SPLUNK_PASSWORD: password
+      SPLUNK_START_ARGS: --accept-license
+    image: "splunk/splunk"   
