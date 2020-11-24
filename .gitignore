@@ -1,0 +1,5 @@
+# do not add the dev license if a user might have it in the project dir
+Splunk.License
+# do not add the dev license in any nested dir setup
+**/Splunk.License
+
