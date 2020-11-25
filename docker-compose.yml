@@ -10,7 +10,7 @@ services:
     container_name: sh-master
   sh-01:
     ports:
-      - "8001:8001"
+      - "8001:8000"
     environment:
       SPLUNK_PASSWORD: password
       SPLUNK_START_ARGS: --accept-license
@@ -18,7 +18,7 @@ services:
     container_name: sh-01
   sh-02:
     ports:
-      - "8002:8002"
+      - "8002:8000"
     environment:
       SPLUNK_PASSWORD: password
       SPLUNK_START_ARGS: --accept-license
@@ -26,7 +26,7 @@ services:
     container_name: sh-02
   indx-master:
     ports:
-      - "8003:8003"
+      - "8003:8000"
     environment:
       SPLUNK_PASSWORD: password
       SPLUNK_START_ARGS: --accept-license
@@ -34,7 +34,7 @@ services:
     container_name: indx-master
   idx-01:
     ports:
-      - "8004:8004"
+      - "8004:8000"
     environment:
       SPLUNK_PASSWORD: password
       SPLUNK_START_ARGS: --accept-license
@@ -42,7 +42,7 @@ services:
     container_name: idx-01
   idx-02:
     ports:
-      - "8005:8005"
+      - "8005:8000"
     environment:
       SPLUNK_PASSWORD: password
       SPLUNK_START_ARGS: --accept-license
@@ -50,7 +50,7 @@ services:
     container_name: idx-02
   deployer:
     ports:
-      - "8006:8006"
+      - "8006:8000"
     environment:
       SPLUNK_PASSWORD: password
       SPLUNK_START_ARGS: --accept-license
