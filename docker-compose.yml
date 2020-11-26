@@ -8,7 +8,7 @@ services:
       SPLUNK_START_ARGS: --accept-license
     image: "splunk/splunk"
     container_name: sh-master
-    host_name: sh-master
+    hostname: sh-master
   sh-01:
     ports:
       - "8001:8000"
@@ -17,7 +17,7 @@ services:
       SPLUNK_START_ARGS: --accept-license
     image: "splunk/splunk"
     container_name: sh-01
-    host_name: sh-01
+    hostname: sh-01
   sh-02:
     ports:
       - "8002:8000"
@@ -26,7 +26,7 @@ services:
       SPLUNK_START_ARGS: --accept-license
     image: "splunk/splunk"
     container_name: sh-02
-    host_name: sh-02
+    hostname: sh-02
   indx-master:
     ports:
       - "8003:8000"
@@ -35,7 +35,7 @@ services:
       SPLUNK_START_ARGS: --accept-license
     image: "splunk/splunk"
     container_name: indx-master
-    host_name: indx-master
+    hostname: indx-master
   idx-01:
     ports:
       - "8004:8000"
@@ -44,7 +44,7 @@ services:
       SPLUNK_START_ARGS: --accept-license
     image: "splunk/splunk"
     container_name: idx-01
-    host_name: idx-01
+    hostname: idx-01
   idx-02:
     ports:
       - "8005:8000"
@@ -53,7 +53,7 @@ services:
       SPLUNK_START_ARGS: --accept-license
     image: "splunk/splunk"
     container_name: idx-02
-    host_name: idx-02
+    hostname: idx-02
   deployer:
     ports:
       - "8006:8000"
@@ -62,4 +62,4 @@ services:
       SPLUNK_START_ARGS: --accept-license
     image: "splunk/splunk"
     container_name: deployer
-    host_name: deployer
+    hostname: deployer
