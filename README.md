@@ -46,6 +46,14 @@ This will show each container name and its associated ports. We use Go Templates
 docker ps --format "table {{.Names}}\t{{.Ports}}"
 ```
 
+Get the ip of a container. Also uses go formatting: 
+
+```
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name
+```
+
+You can also use the container id instead.
+
 ## Contributing
 
 Pull requests are always welcome.
