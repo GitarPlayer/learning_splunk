@@ -39,6 +39,13 @@ The familiar Splunk login page should greet you at localhost:8000 to localhost:8
 
 Running docker ps should show you six splunk container running. You could write a simple bash script that curls localhost:8000-80006 -L (follow redirects) for example.
 
+### Useful commands
+
+This will show each container name and its associated ports. We use Go Templates when we specify --format (Docker was written in Go). For more information please visit the Docker doc https://docs.docker.com/config/formatting/
+```  
+docker ps --format "table {{.Names}}\t{{.Ports}}"
+```
+
 ## Contributing
 
 Pull requests are always welcome.
